@@ -9,6 +9,11 @@
         name: nginx
         state: present
 
+    - name: Install curl
+      ansible.builtin.package:
+        name: curl
+        state: present
+
     - name: Create application user
       ansible.builtin.user:
         name: "{{ app_user }}"
